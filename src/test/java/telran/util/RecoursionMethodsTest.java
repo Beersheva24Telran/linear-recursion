@@ -29,4 +29,23 @@ public class RecoursionMethodsTest {
         int[] ar = {1, 2, 3, 4, 5};
         assertEquals(15, sum(ar));
     }
+    @Test
+    void squareTest() {
+        assertEquals(100, square(10));
+        assertEquals(100, square(-10));
+        assertEquals(0, square(0));
+    }
+    @Test
+	void isSubstringTest() {
+		String str = "blablablabladablbladdal";
+		assertTrue(isSubstring(str, "blab"));
+		assertTrue(isSubstring(str, "ladd"));
+		assertTrue(isSubstring(str, "ablabla"));
+		assertTrue(isSubstring(str, "dd"));
+		assertFalse(isSubstring(str, "blal"));
+		assertFalse(isSubstring(str, "bladds"));
+		assertFalse(isSubstring(str, "daba"));
+		
+	}
+    
 }
